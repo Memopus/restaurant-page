@@ -1,5 +1,8 @@
-import home from "./home";
-import { loadNavbar, loadMenu, loadAbout, loadBody, loadFooter } from "./home";
+import loadNavbar from "./components/navbar";
+import loadAbout from "./components/about";
+import loadFooter from "./components/footer";
+import loadMenu from "./components/menu";
+import loadBody from "./components/home";
 
 const nav = loadNavbar();
 let body = loadBody();
@@ -9,7 +12,7 @@ let footer = loadFooter();
 
 window.addEventListener("click", (e) => {
   console.log(e);
-  console.log(e.target);
+  console.log("e.target.classList");
   if (nav.includes(e.target) && e.target.innerText === "Home") {
     reset();
     body = loadBody();
@@ -31,6 +34,14 @@ window.addEventListener("click", (e) => {
     about.style.padding = "5rem";
     footer = loadFooter();
     footer.style.top = "10px";
+  }
+  if (e.target.className == "the-title") {
+    console.log("dfd");
+    reset();
+    body = loadBody();
+    menu = loadMenu();
+    about = loadAbout();
+    footer = loadFooter();
   }
 });
 
