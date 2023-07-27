@@ -11,6 +11,7 @@ export default function loadBody() {
   const img = document.createElement("img");
   const deliveryDiv = document.createElement("div");
   const mainDiv = document.createElement("div");
+  const imgDiv = document.createElement("div");
 
   const deliveryInfo = [
     {
@@ -34,7 +35,6 @@ export default function loadBody() {
     const deliveryH1 = document.createElement("h1");
     const deliveryP = document.createElement("p");
     const div = document.createElement("div");
-
     deliveryH1.textContent = deliveryInfo[i].title;
     deliveryP.textContent = deliveryInfo[i].description;
     div.classList.add("delivery-element");
@@ -52,14 +52,16 @@ export default function loadBody() {
   img.src = pasta;
   mainDiv.classList.add("main-div");
   deliveryDiv.classList.add("delivery-info");
+  imgDiv.classList.add("img-div");
 
   div.appendChild(h1);
   div.appendChild(p);
+  imgDiv.appendChild(img);
   buttons.appendChild(button);
   buttons.appendChild(trackOrder);
   div.appendChild(buttons);
   mainDiv.appendChild(div);
-  mainDiv.appendChild(img);
+  mainDiv.appendChild(imgDiv);
   main.appendChild(mainDiv);
   main.appendChild(deliveryDiv);
   document.getElementById("content").appendChild(main);

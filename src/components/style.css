@@ -68,16 +68,11 @@ main .main-div {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
-  padding: 7rem;
+  padding: 4rem;
 }
-/* 
-/* /* main div {
-  display: flex;
-  justify-content: center;
-} */
+
 main div h1 {
-  font-size: 50px;
+  font-size: 35px;
   margin-bottom: 20px;
 }
 main div p {
@@ -113,7 +108,7 @@ main .delivery-info {
   width: 70%;
   display: flex;
   position: absolute;
-  bottom: -15%;
+  bottom: -25%;
   border-radius: 5px;
   box-shadow: #ffeadf;
   left: 50%;
@@ -156,6 +151,13 @@ section {
   width: 100%;
 }
 
+.img-div {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 .menu .card img {
   height: 300px;
   width: 300px;
